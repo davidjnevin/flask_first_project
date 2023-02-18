@@ -2,7 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
 
-app.secret_key = "\xef\xf2\x14b\xdb}\x1bF\xfbw\xc25\xd2GJ\x86"
+app.config.from_pyfile("settings.py")
+
 
 @app.route("/")
 def index():
